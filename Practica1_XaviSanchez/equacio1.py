@@ -29,7 +29,7 @@ eq = EquacioPrimerGrau("2x + 3 = 7")
 eq.calcula()
 
 
-#extreuPart12()
+#extreuPart1as2()
 
 #extreuPart1()
 
