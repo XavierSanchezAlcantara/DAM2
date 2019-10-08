@@ -1,10 +1,10 @@
-import unittest
+#import unittest
 
 class EquacioPrimerGrau:
     def __init__(self,eq):
         self.eq = eq
         
-        #split=eq.split()
+        split=eq.split()
         a,self.operacio,b,igual,c=eq.split()
         x=a[:-1]
         z=a[-1]
@@ -21,17 +21,18 @@ class EquacioPrimerGrau:
 
         if self.operacio=="+":
             resultat=(self.cc-self.bb)/self.aa
-        else:
+        elif self.operacio=='-':
             resultat=(self.cc+self.bb)/self.aa
-        
+        else:
+            print('Operador incorrecte!!!')
         print(resultat)
 
 eq = EquacioPrimerGrau("2x + 3 = 7")
 eq.calcula()
 
-class TestEquacio(unittest.TestCase):
-    def test_eq(self):
-        self.assertEqual(Equacio('20x + 3 = 70 ').calcula(),2.0)
+#class TestEquacio(unittest.TestCase):
+ #   def test_eq(self):
+ #       self.assertEqual(Equacio('20x + 3 = 70 ').calcula(),2.0)
 
-if __name__ == "_main_":
-    unittest.main()
+#if __name__ == "_main_":
+ #   unittest.main()
