@@ -25,8 +25,7 @@ class EquacioPrimerGrau:
         
         print(resultat)
 
-eq = EquacioPrimerGrau("2x + 3 = 7")
-eq.calcula()
+
 
 
 #extreuPart1asasda2()
