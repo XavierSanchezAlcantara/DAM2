@@ -1,3 +1,4 @@
+import unittest
 
 class EquacioPrimerGrau:
     def __init__(self,eq):
@@ -28,13 +29,9 @@ class EquacioPrimerGrau:
 eq = EquacioPrimerGrau("2x + 3 = 7")
 eq.calcula()
 
+class TestEquacio(unittest.TestCase):
+    def test_eq(self):
+        self.assertEqual(Equacio('20x + 3 = 70 ').calcula(),2.0)
 
-#extreuPart1asasda2()
-
-#extreuPart1()
-
-##ExtreuPart2()
-
-#ExtreuOperador()
-
-#ExtreuPart3()
+if __name__ == "_main_":
+    unittest.main()
