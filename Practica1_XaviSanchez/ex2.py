@@ -13,7 +13,7 @@ class TestEquacio(unittest.TestCase):
     def testincorrecte(self):
         eq = EquacioPrimerGrau("2x / 3 = 7")
         self.assertEqual(eq.calcula(),"Operador incorrecte!!!!")
-        self.assertIsInstance(eq.b, basestring)
+        self.assertIsInstance(eq.operacio, basestring)
 
     def test_negatiu(self):
         eq = EquacioPrimerGrau("2x - 3 = 7")

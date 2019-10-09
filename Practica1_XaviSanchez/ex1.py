@@ -1,4 +1,6 @@
 class EquacioPrimerGrau:
+    
+
     def __init__(self,eq):
         self.eq = eq
         
@@ -6,11 +8,13 @@ class EquacioPrimerGrau:
         a,self.operacio,b,igual,c=eq.split()
         x=a[:-1]
         z=a[-1]
-        
-        self.aa=float(x)
-        self.bb=float(b)
-        self.cc=float(c)
-        if type(x)==float & part12[:-1]=='x':
+        try:
+            self.aa=float(x)
+            self.bb=float(b)
+            self.cc=float(c)
+        except:
+            return "l'equacio conte caracter no calculables: "
+        if type(x)==float and x=='x':
             return ("hola")
 
         print("Part12= "+x)
