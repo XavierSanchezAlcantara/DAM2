@@ -1,40 +1,43 @@
 class EquacioPrimerGrau:
-    
 
-    def __init__(self,eq):
-        self.eq = eq
+
+    def __init__(self,equacion):
+
+        self.equacion = equacion.split()
         
-        split=eq.split()
-        a,self.operacio,b,igual,c=eq.split()
-        x=a[:-1]
-        z=a[-1]
+
+    def calcula(self):
+        part12 = self.equacion[0]
         try:
-            self.aa=float(x)
-            self.bb=float(b)
-            self.cc=float(c)
-        except:
-            return "l'equacio conte caracter no calculables: "
-        if type(x)==float and x=='x':
-            return ("hola")
-
-        print("Part12= "+x)
-        print("Part1 = "+a)
-        print("Part2 = "+b)
-        print("Operador= "+ self.operacio)
-        print("Part3 = "+c)
-    def calcula(self):    
-
-        if self.operacio=="+":
-            resultat=(self.cc-self.bb)/self.aa
-            return resultat
-        elif self.operacio=="-":
-            resultat=(self.cc+self.bb)/self.aa
-            return resultat
-        else:
-            return ("Operador incorrecte!!!!")
-        print(resultat)
+            part1 = float(part12[:-1])
+            part3 = float(self.equacion[2])
+            part4 = float(self.equacion[4])
+        except: 
+            return("l'equacio te un caracter no calculable o no segueix el format: ax + b = c")
+        part2 = part12[1]
+        operador = self.equacion[1]
+        
+        #print ("part1=",part1)
+        #print ("part2=",part2)
+        #print ("operator=",operador)
+        #print ("part3=",part3)  
+        #print ("part4=",part4) 
 
 
+        
+        if operador == "+":
+            calculo = (part4 - part3) / part1
+            return calculo
+
+            
+        elif operador == "-":
+            calculo = (part4 + part3) / part1
+            return calculo
+
+        else: 
+           return ("Operador no valid: ")
+            
+        
 
 
 #extreuPart1asasda2()
